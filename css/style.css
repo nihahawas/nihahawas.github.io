@@ -444,3 +444,32 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .projects .project-card .project-body{display:flex !important;flex-direction:column !important;min-height:195px !important;flex:1 !important}
 @media(max-width:1060px){.projects .project-grid-three{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
 @media(max-width:700px){.projects .project-grid-three{grid-template-columns:1fr !important}.projects .project-card .project-image{height:200px !important;flex-basis:200px !important}}
+/* FINAL FIX — make entire contact links clickable */
+.contact-links {
+    position: relative;
+    z-index: 10;
+}
+
+.contact-links a {
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* EMAIL ONLY — keep same hover behavior as LinkedIn/GitHub */
+.contact-links a:first-child {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 150px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #6d645e;
+    position: relative;
+    top: 0;
+}
+
+.contact-links a:first-child:hover {
+    border-bottom: 1px solid #d96a36 !important;
+}
